@@ -36,8 +36,7 @@ session_start();
                     <a class="nav-item nav-link active" href="/LOGIN_Tachbot/vista/homePage.php">BOTS</a>
                     <a class="nav-item nav-link" href="#blog">BLOG</a>
                     <a class="nav-item nav-link" href="#contact">CONTACTO</a>
-                    <a class="nav-item nav-link" href="/LOGIN_Tachbot/vista/login.php">LOGIN <span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#miCuenta">MI CUENTA<span class="sr-only">(current)</span></a>
                 </div>
             </div>
         </div>
@@ -47,26 +46,70 @@ session_start();
         echo '<div align="center" class="card" style="background-color:lightblue">';
         echo 'ERROR!! debe registrarse: <a href="login.php"> Login </a> </div>';
     } else { //si la sesión existe 
-        if (isset($_SESSION['ultimoAcceso'])){ //comprueba que no haya pasado x tiempo desde la sesion
-            $ahora=time();
-            $antes=$_SESSION['ultimoAcceso'];
-            $_SESSION['ultimoAcceso']=$ahora;
-            if ($ahora-$antes > 60){
-                $_SESSION=array(); //eliminamos las variables de sesión
+        if (isset($_SESSION['ultimoAcceso'])) { //comprueba que no haya pasado x tiempo desde la sesion
+            $ahora = time();
+            $antes = $_SESSION['ultimoAcceso'];
+            $_SESSION['ultimoAcceso'] = $ahora;
+            if ($ahora - $antes > 60) {
+                $_SESSION = array(); //eliminamos las variables de sesión
                 session_destroy();
                 //eliminamos las cookies de sesión:
-                $paramCookies= session_get_cookie_params();
-                setcookie(session_name(),0,time()-3600,$paramCookies["path"]);
+                $paramCookies = session_get_cookie_params();
+                setcookie(session_name(), 0, time() - 3600, $paramCookies["path"]);
                 echo '<script type="text/javascript">
                 alert("Sesión expiró. Vuelve a loguearte");
                 window.location.assign("/LOGIN_Tachbot/vista/login.php"); </script>';
             }
         }
-        echo ' <div align="center" class="card" style="background-color:lightblue">';
-        echo '<h1>Bienvenid@ a chatbot</h1>';
-        echo $_SESSION['correo'] . '</br>';
-        echo '<a href="logout.php"> Logout </a>';
-    }         
+        echo '<div align="center" class="card" style="background-color:lightblue">';
+        echo '
+        <div class="row" >
+            <div class="col-sm-11" >
+                    <div class="card-body" style="background-color:lightblue">
+                        <h5 class="card-title">Bienvenid@ a chatbot: '.$_SESSION['correo'] .'</h5>
+                    </div>
+            </div>
+            <div class="col-sm-1" >
+                <div class="card" >
+                    <a href="logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
+        ';
+        echo '
+        
+<div class="row">
+<div class="col-sm-4">
+        <div class="card-body" style="background-color:lightblue">
+            <h5 class="card-title">CHATBOT 1</h5>
+            <img src=/LOGIN_Tachbot/img/huevo.jpg style="width:50%">
+            <br><br>
+            <p class="card-text">Este chatbot ofrece...</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+</div>
+<div class="col-sm-4">
+        <div class="card-body" style="background-color:lightblue">
+            <h5 class="card-title">CHATBOT 2</h5>
+            <img src=/LOGIN_Tachbot/img/mayorBot.jpg style="width:50%">
+            <br><br>
+            <p class="card-text">Este chatbot ofrece...</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+</div>
+<div class="col-sm-4">
+        <div class="card-body" style="background-color:lightblue">
+            <h5 class="card-title">CHATBOT 3</h5>
+            <img src=/LOGIN_Tachbot/img/traductorBot.jpg style="width:50%">
+            <br><br>
+            <p class="card-text">Este chatbot ofrece...</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+</div>
+</div>
+<br>
+        ';
+    }
     ?>
     </div>
 </body>
