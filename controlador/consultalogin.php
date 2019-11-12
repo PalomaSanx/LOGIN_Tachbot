@@ -15,7 +15,10 @@ if (isset($_POST['correo']) && isset($_POST['contrasena'])) { /* Si hay algo en 
 			$usuario_select = $resultado_select->fetch(PDO::FETCH_ASSOC); /* Recorremos las consultas */
 			if (password_verify($_POST["contrasena"], $usuario_select['contrasena'])) { /* Si las contraseñas coinciden */
 				$_SESSION["correo"] = $_POST["correo"]; /* Guardamos la sesion del usuario */
-				// echo '<a href="paginacliente.php">Redirigir</a>';
+				$_SESSION["ultimoAcceso"] = time();
+				if(isset($_POST['recordar'])) {
+					setcookie("correo",$usuario_select["correo"] , time() + 60*60*24*365);
+				}
 				header('Location: /LOGIN_Tachbot/vista/homePage.php'); /* Y nos redirigimos a home */
 			} else {
 				header('Location: /LOGIN_Tachbot/vista/login.php?fallo1=true'); /* Si la contraseña no esta asociada a ese usuario volvemos a intentarlo */

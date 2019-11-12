@@ -41,7 +41,7 @@
 		<legend>LOGIN</legend>
 		<form action="/LOGIN_Tachbot/controlador/consultalogin.php" method="POST">
 			Introduzca su correo:<br>
-			<input type="text" size="40" maxlength="64" name="correo" required /><br><br>
+			<input type="text" size="40" maxlength="64" name="correo" required value= <?php echo 'hola'?> /><br><br>
 			Introduzca su contraseña:<br>
 			<input type="password" size="40" name="contrasena" required /><br><br>
 			<input type="checkbox" name="recordar" value="recordar"> Recordar durante 1 año<br><br>

@@ -20,19 +20,20 @@
 
     try{
     $stmt->execute(array(':nombre' => $nombre, ':apellido1' => $apellido1, ':apellido2' => $apellido2, ':ciudad' => $ciudad, ':telefono' =>$telefono, ':correo'=>$correo,':contrasena' =>$contrasena));
+    $_SESSION['correo'] =$_POST["correo"];
     }catch(Exception $e){
         echo 'Excepción capturada: ',  $e->getMessage(), "\n";
         header('Location:/LOGIN_Tachbot/vista/registro.php?fallo1=true');
     }
    
     echo "Inserción completada"; 
-    if (isset($_SESSION['usuario'])) { // Comrpobamos si la sesión estaba iniciada 
+    if (isset($_SESSION['correo'])) { // Comrpobamos si la sesión estaba iniciada 
         echo '<p> Sesión iniciada previamente </p>';
         header('Location:/LOGIN_Tachbot/vista/homePage.php');
     }
     //cerrar
    
-    echo $_POST["nombre"];
+
 
     //xml y ajax
     // lola martinez cifuentes albacete 638554015 lola@gmail.com 45lolita
