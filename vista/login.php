@@ -15,7 +15,7 @@
     <!--Navegación-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="/LOGIN_Tachbot/vista/welcomeHome.php">
                 <p>TACHBOT</p>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -25,13 +25,11 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     <a id="1" class="nav-item nav-link" href="#about">SOBRE NOSOTROS</a>
-                    <a class="nav-item nav-link" href="#services">SERVICIOS</a>
-                    <a class="nav-item nav-link" href="/LOGIN_Tachbot/vista/homePage.php">BOTS</a>
+                    <a class="nav-item nav-link" href="/LOGIN_Tachbot/vista/welcomeHome.php">WELCOME</a>
                     <a class="nav-item nav-link" href="#blog">BLOG</a>
                     <a class="nav-item nav-link" href="#contact">CONTACTO</a>
                     <a class="nav-item nav-link active" href="/LOGIN_Tachbot/vista/login.php">LOGIN <span
                             class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="/LOGIN_Tachbot/vista/registro.php">REGISTRO</a>
                 </div>
             </div>
         </div>
@@ -71,8 +69,11 @@
     <script src="/LOGIN_Tachbot/js/jquery-3.4.1.min.js"></script>
     <script src="/LOGIN_Tachbot/js/bootstrap.min.js"></script>
     <script src="/LOGIN_Tachbot/js/main.js"></script>
-    <!--
-    <script>
+
+  
+
+    <!-- AJAX PARA EL LOGIN (comprueba usuario y contraseña, de ser así lanza a pagina home y sino emite mensaje error-->
+    <!--<script>
     $(document).ready(function() {
 
         $('#Enviar').click(function() {
@@ -110,8 +111,8 @@
         });
 
     });
-	</script>
--->
+	</script> -->
+
 
 </body>
 

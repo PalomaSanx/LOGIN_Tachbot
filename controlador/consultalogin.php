@@ -17,9 +17,6 @@ if (isset($_POST['correo']) && isset($_POST['contrasena'])) { /* Si hay algo en 
 				$_SESSION["correo"] = $_POST["correo"]; /* Guardamos la sesion del usuario */
 				$_SESSION["ultimoAcceso"] = time();
 				if(isset($_POST['recordar'])) {
-					echo '<script type="text/javascript">
-                alert("Sesión expiró. Vuelve a loguearte");
-                window.location.assign("/LOGIN_Tachbot/vista/login.php"); </script>';
 					setcookie("correo",$_POST["correo"] , time() + 60*60*24*365);
 				}
 				header('Location: /LOGIN_Tachbot/vista/homePage.php'); /* Y nos redirigimos a home */

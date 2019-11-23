@@ -12,28 +12,28 @@
 
 <body>
 
-	<!--Navegación-->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container">
-			<a class="navbar-brand" href="/">
-				<p>TACHBOT</p>
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav ml-auto">
-					<a id="1" class="nav-item nav-link" href="#about">SOBRE NOSOTROS</a>
-					<a class="nav-item nav-link" href="#services">SERVICIOS</a>
-					<a class="nav-item nav-link" href="/vista/homePage.php">BOTS</a>
-					<a class="nav-item nav-link" href="#blog">BLOG</a>
-					<a class="nav-item nav-link" href="#contact">CONTACTO</a>
-					<a class="nav-item nav-link" href=/LOGIN_Tachbot/vista/login.php>LOGIN</a>
-					<a class="nav-item nav-link active" href="/LOGIN_Tachbot/vista/registro.php">REGISTRO <span class="sr-only">(current)</span></a>
-				</div>
-			</div>
-		</div>
-	</nav>
+	  <!--Navegación-->
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/LOGIN_Tachbot/vista/welcomeHome.php">
+                <p>TACHBOT</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a id="1" class="nav-item nav-link" href="#about">SOBRE NOSOTROS</a>
+                    <a class="nav-item nav-link" href="/LOGIN_Tachbot/vista/welcomeHome.php">WELCOME</a>
+                    <a class="nav-item nav-link" href="#blog">BLOG</a>
+                    <a class="nav-item nav-link" href="#contact">CONTACTO</a>
+                    <a class="nav-item nav-link active" href="/LOGIN_Tachbot/vista/login.php">LOGIN <span
+                            class="sr-only">(current)</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
 	<!--tarjetas (contenido)-->
 	<!--contenido REGISTRO-->

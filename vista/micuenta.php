@@ -25,8 +25,7 @@ session_start();
             <a class="navbar-brand" href="/LOGIN_Tachbot/vista/homePage.php">
                 <p>TACHBOT</p>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -64,9 +63,15 @@ session_start();
         echo '<div align="center" class="card" style="background-color:lightblue">';
         echo '
         <div class="row" >
-            <div class="col-sm-11" >
+            <div class="col-sm-3" >
+                <div class="card" >
+                    <img src=/LOGIN_Tachbot/img/usuario.jpg style="width:30%">
+                    <a style="color:blue" href="/LOGIN_Tachbot/controlador/consultaProductos.php">Mis pedidos</a>
+                </div>
+            </div>        
+            <div class="col-sm-8" >
                     <div class="card-body" style="background-color:lightblue">
-                        <h5 class="card-title">Bienvenid@ a chatbot: '.$_SESSION['correo'] .'</h5>
+                        <h5 class="card-title">MI CUENTA</h5>
                     </div>
             </div>
             <div class="col-sm-1" >
@@ -75,39 +80,6 @@ session_start();
                 </div>
             </div>
         </div>
-        ';
-        echo '
-        
-<div class="row">
-<div class="col-sm-4">
-        <div class="card-body" style="background-color:lightblue">
-            <h5 class="card-title">CHATBOT 1</h5>
-            <img src=/LOGIN_Tachbot/img/huevo.jpg style="width:50%">
-            <br><br>
-            <p class="card-text">Este chatbot ofrece...</p>
-            <a href="homePage2.php" class="btn btn-primary">ver habilidades</a>
-        </div>
-</div>
-<div class="col-sm-4">
-        <div class="card-body" style="background-color:lightblue">
-            <h5 class="card-title">CHATBOT 2</h5>
-            <img src=/LOGIN_Tachbot/img/mayorBot.jpg style="width:50%">
-            <br><br>
-            <p class="card-text">Este chatbot ofrece...</p>
-            <a href="homePage3.php" class="btn btn-primary">ver habilidades</a>
-        </div>
-</div>
-<div class="col-sm-4">
-        <div class="card-body" style="background-color:lightblue">
-            <h5 class="card-title">CHATBOT 3</h5>
-            <img src=/LOGIN_Tachbot/img/traductorBot.jpg style="width:50%">
-            <br><br>
-            <p class="card-text">Este chatbot ofrece...</p>
-            <a href="homePage4.php" class="btn btn-primary">ver habilidades</a>
-        </div>
-</div>
-</div>
-<br>
         ';
     }
     ?>
